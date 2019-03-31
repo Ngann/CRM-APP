@@ -1,0 +1,3 @@
+rootProject.name = 'crmtwo'
+
+include ':app'
