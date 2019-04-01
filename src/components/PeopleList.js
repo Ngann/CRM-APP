@@ -9,9 +9,9 @@ const styles = StyleSheet.create({
         width: 353,
         flexWrap: 'wrap',
         paddingTop: 20,
-        paddintLeft: 20,
+        paddingLeft: 20,
     }
-})
+});
 
 //Flatlist is a react native that takes a prop call data, and inside data we can pass props.people.
 // To maps it to people, then renders the items, and this will show as many items.
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
 class PeopleList extends Component {
     render() {
         return (
-            <View styles.container>
+            <View styles = {styles.container}>
                 <FlatList
                     data={this.props.people}
                     renderItem={({item}) => <PeopleItem people={item}/>}
