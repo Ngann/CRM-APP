@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 import { connect } from 'react-redux';
 import { getTheme } from 'react-native-material-kit';
 import * as actions from '../actions';
+import Icon from 'react-native-vector-icons/EvilIcons';
 
 const theme = getTheme();
 
@@ -39,7 +40,7 @@ const PeopleItem = (props) => {
                 source={require('../images/background.jpg')}
                 style={[theme.cardImageStyle, styles.image]}
             />
-            <Text 
+            <Icon  
                 name={'user'}
                 size={100}
                 style={styles.icon}
