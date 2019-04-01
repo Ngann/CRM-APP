@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import PeopleItem from './PeopleItem';
+import Icon from 'react-native-vector-icons/EvilIcons';
 
 const styles = StyleSheet.create({
     container: {
@@ -17,13 +18,18 @@ const styles = StyleSheet.create({
 // To maps it to people, then renders the items, and this will show as many items.
 // Shows all the people and all items for the people.
 class PeopleList extends Component {
+    static navigationOptions = {
+        tabBarIcon: ({tintColor}) => (
+            <Icon name={'user'} size={50} color={tintColor} />
+        )
+    }
     render() {
         return (
-            <View styles = {styles.container}>
-                <FlatList
-                    data={this.props.people}
-                    renderItem={({item}) => <PeopleItem people={item}/>}
-                    />
+            <View style={styles.container}>
+            <FlatList
+                data={this.props.people}
+                renderItem={({item}) => <PeopleItem people={item} />}
+            />
             </View>
         )
     }

@@ -8,6 +8,8 @@ import people from './people.json';
 //create a variable initialState with object people
 const initialState = {
     people,
+    detailedView: false,
+    personSelected: null,
 }
 
 // create fuction which will pass as the state, the intial state and action.
@@ -17,6 +19,19 @@ const initialState = {
 // base on the action type, it will return a new state.
 export default (state = initialState, action) => {
     switch (action.type) {
+        case 'SELECTED_PERSON':
+            return {
+                // creates a copy of the state with properties
+                ...state,
+                detailedView: true,
+                personSelected: action.payload
+            }
+        case 'NONE_SELECTED' :
+            return {
+                ...state,
+                detailedView: false,
+                personSelected: null,
+            }
         default:
             return state;
     }

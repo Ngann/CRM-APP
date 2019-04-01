@@ -2,8 +2,8 @@ import React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import { connect } from 'react-redux';
 import { getTheme } from 'react-native-material-kit';
-import * as actions from '../actions';
 import Icon from 'react-native-vector-icons/EvilIcons';
+import * as actions from '../actions';
 
 const theme = getTheme();
 
@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
     },
 });
 
-
 const PeopleItem = (props) => {
     return (
         <View style={[theme.cardStyle, styles.card]}>
@@ -40,7 +39,7 @@ const PeopleItem = (props) => {
                 source={require('../images/background.jpg')}
                 style={[theme.cardImageStyle, styles.image]}
             />
-            <Icon  
+            <Icon 
                 name={'user'}
                 size={100}
                 style={styles.icon}

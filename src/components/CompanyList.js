@@ -7,7 +7,7 @@ import * as actions from '../actions';
 class CompanyList extends Component {
     static navigationOptions ={
         tabBarIcon: ({tintColor}) => (
-            <Icon name={'user'} size={50} color={tintColor}/>
+            <Icon name={'archive'} size={50} color={tintColor}/>
         )
     }
     render() {
