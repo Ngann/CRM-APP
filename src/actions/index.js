@@ -10,3 +10,6 @@ export const nonePerson = () => {
         type: 'NONE_SELECTED',
     };
 };
+
+
+//here are all the actions used in reducers
