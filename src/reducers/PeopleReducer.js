@@ -23,14 +23,15 @@ export default (state = initialState, action) => {
             return {
                 // creates a copy of the state with properties
                 ...state,
-                detailedView: true,
-                personSelected: action.payload
+                detailView: true,
+                personSelected: action.selectId
             }
-        case 'NONE_SELECTED' :
+
+        case 'NONE_SELECTED':
             return {
                 ...state,
-                detailedView: false,
-                personSelected: null,
+                detailView: false,
+                personSelected: null
             }
         default:
             return state;
@@ -38,3 +39,4 @@ export default (state = initialState, action) => {
 }
 
 //now we will create the people.json file
+
