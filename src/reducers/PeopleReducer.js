@@ -2,14 +2,18 @@
 //actions calls the reducer
 //reducer changes the state which renders on the components 
 
-
-import people from './people.json';
-
 //create a variable initialState with object people
 const initialState = {
     people,
     detailedView: false,
     personSelected: null,
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    company: '',
+    project: '',
+    notes:'',
 }
 
 // create fuction which will pass as the state, the intial state and action.
@@ -33,9 +37,34 @@ export default (state = initialState, action) => {
                 detailView: false,
                 personSelected: null
             }
+        case 'FORM_UPDATE':
+            return {
+                ...state,
+                [action.payload.prop]: action.payload.value
+            }
+
+        case 'NEW_CONTACT':
+            return{
+                ... state,
+                firstName: '',
+                lastName: '',
+                phone: '',
+                email: '',
+                company: '',
+                project: '',
+                notes:'',
+            }
+        
+        case 'ADD_PERSON' :
+            return {
+                ...state,
+                ...action.newPerson
+            }
+
         default:
             return state;
     }
+
 }
 
 //now we will create the people.json file

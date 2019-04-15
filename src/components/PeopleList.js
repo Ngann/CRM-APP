@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Icon from 'react-native-vector-icons/EvilIcons';
 import PeopleItem from './PeopleItem';
 import PeopleDetail from './PeopleDetail';
+import {loadIntialContacts} from '../actions'
 
 const styles = StyleSheet.create({
     container: {
@@ -23,6 +24,10 @@ class PeopleList extends Component {
         tabBarIcon: ({tintColor}) => (
             <Icon name={'user'} size={50} color={tintColor} />
         )
+    }
+
+    componentWillMount(){
+        this.props.loadIntialContacts();
     }
 
     renderInitialView() {
@@ -55,6 +60,7 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(PeopleList);
+export default connect(mapStateToProps, {loadIntialContacts})(PeopleList);
 
 //This above function uses connect to mapStateToProps and running the function to People List
+//Key extractor is a prop inside of the flatlist component to.. 

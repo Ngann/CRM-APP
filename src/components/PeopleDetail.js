@@ -78,7 +78,7 @@ class PeopleDetail extends Component {
                     <EvilIcon name={'user'} size={100} style={styles.icon} />
                     <SimpleIcon name={'close'} size={30} style={styles.closeIcon}
                      onPress={() => this.props.noneSelected()}/>
-                    <Text style={[theme.cardTitleStyle, styles.title1]}>{this.props.person.firstName} {this.props.person.LastName}</Text>
+                    <Text style={[theme.cardTitleStyle, styles.title1]}>{this.props.person.firstName} {this.props.person.lastName}</Text>
                     <Text style={[theme.cardTitleStyle, styles.title2]}>from {this.props.person.company}</Text>
                     <View style={styles.textArea}>
                         <MaterialIcon name={'phone'} size={40} style={styles.textIcons}/>
