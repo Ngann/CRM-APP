@@ -36,7 +36,6 @@ const PeopleItem = (props) => {
     return (
         <TouchableWithoutFeedback 
             onPress={() => props.selectPerson(props.people)}>
-            
         <View style={[theme.cardStyle, styles.card]}>
             <Image 
                 source={require('../images/background.jpg')}
@@ -55,5 +54,8 @@ const PeopleItem = (props) => {
 }
 
 export default connect(null, actions)(PeopleItem);
+
+
+
 
 //onPress will pass the selectedPerson actions and change the state

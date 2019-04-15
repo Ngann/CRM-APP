@@ -5,15 +5,15 @@ import Icon from 'react-native-vector-icons/EvilIcons';
 import * as actions from '../actions';
 
 class CompanyList extends Component {
-    static navigationOptions ={
+    static navigationOptions = {
         tabBarIcon: ({tintColor}) => (
-            <Icon name={'archive'} size={50} color={tintColor}/>
+            <Icon name={'archive'} size={50} color={tintColor} />
         )
     }
     render() {
         return (
-            <View >
-                <Text>Add person screen</Text>
+            <View>
+                <Text>Company screen</Text>
             </View>
         )
     }

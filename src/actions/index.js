@@ -11,12 +11,14 @@ export const noneSelected = () => {
     };
 };
 
-export const formUpdate = ({props, value}) => {
+
+export const formUpdate = ({ prop, value }) => {
     return {
         type: 'FORM_UPDATE',
-        payload: { props, value },
+        payload: { prop, value },
     };
 };
+
 
 export const createNewContact = ({firstName, lastName, phone,email, company, projects, notes}) => {
     return (dispatch) => {
@@ -44,5 +46,16 @@ export const createNewContact = ({firstName, lastName, phone,email, company, pro
     }
 }
 
+export const loadInitialContacts = () => {
+    return (dispatch) => {
+        fetch('https://localhost:8081/contact')
+            .then((response) => {
+                return response.json();})
+            .then((data) => {
+                dispatch({ type: 'INITIAL_FETCH', payload: data })
+            })
+            .catch(error => console.log(error))
+    };
+};
 
 //here are all the actions used in reducers

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Icon from 'react-native-vector-icons/EvilIcons';
 import PeopleItem from './PeopleItem';
 import PeopleDetail from './PeopleDetail';
-import {loadIntialContacts} from '../actions'
+import { loadInitialContacts } from '../actions';
 
 const styles = StyleSheet.create({
     container: {
@@ -16,9 +16,6 @@ const styles = StyleSheet.create({
     }
 });
 
-//Flatlist is a react native that takes a prop call data, and inside data we can pass props.people.
-// To maps it to people, then renders the items, and this will show as many items.
-// Shows all the people and all items for the people.
 class PeopleList extends Component {
     static navigationOptions = {
         tabBarIcon: ({tintColor}) => (
@@ -26,8 +23,8 @@ class PeopleList extends Component {
         )
     }
 
-    componentWillMount(){
-        this.props.loadIntialContacts();
+    componentWillMount() {
+        this.props.loadInitialContacts();
     }
 
     renderInitialView() {
@@ -53,6 +50,7 @@ class PeopleList extends Component {
         )
     }
 }
+
 const mapStateToProps = state => {
     return { 
         people: state.people,
@@ -60,7 +58,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {loadIntialContacts})(PeopleList);
-
-//This above function uses connect to mapStateToProps and running the function to People List
-//Key extractor is a prop inside of the flatlist component to.. 
+export default connect(mapStateToProps, { loadInitialContacts })(PeopleList);
