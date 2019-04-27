@@ -19,10 +19,9 @@ export const formUpdate = ({ prop, value }) => {
     };
 };
 
-
-export const createNewContact = ({firstName, lastName, phone,email, company, projects, notes}) => {
+export const createNewContact = ({ firstName, lastName, phone, email, company, project, notes }) => {
     return (dispatch) => {
-        fetch('https://localhost:8081/contact', {
+        fetch('http://localhost:3000/contact', {
             method: "POST",
             body: JSON.stringify({
                 "firstName": firstName,
@@ -30,25 +29,25 @@ export const createNewContact = ({firstName, lastName, phone,email, company, pro
                 "phone": phone,
                 "email": email,
                 "company": company,
-                "projects": projects,
+                "project": project,
                 "notes": notes,
             }),
             headers: {
                 "Accept": "application/json",
-                "Content-type":"application/json"
+                "Content-Type": "application/json"
             }
         })
         .then((response) => console.log(response))
         .then(() => {
-            dispatch({type: 'NEW_CONTACT'});
+            dispatch({ type: 'NEW_CONTACT' });
         })
         .catch(error => console.log(error))
-    }
-}
+    };
+};
 
 export const loadInitialContacts = () => {
     return (dispatch) => {
-        fetch('https://localhost:8081/contact')
+        fetch('http://localhost:3000/contact')
             .then((response) => {
                 return response.json();})
             .then((data) => {
@@ -57,5 +56,3 @@ export const loadInitialContacts = () => {
             .catch(error => console.log(error))
     };
 };
-
-//here are all the actions used in reducers
