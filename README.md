@@ -7,4 +7,4 @@ database:
 need mongo DB installed
 npm install
 npm start
-localhost 3000 to contacts
+localhost 3000 to contact
