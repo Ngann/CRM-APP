@@ -1,3 +1,5 @@
-- Contact add the the system if a first name and last name is provided.
-- Contact with information for phone, email, notes.. etc.. will not hit the database.
-    - need to review the setup.. =(
+- Contact will only add to the DB if a first name and last name is provided(this is ok..)
+- Contact with information for phone number provdied will not hit the database.
+    - Need to fix first
+- Update contact form does not work, error : can't find varial:id
+- When updating contsct: projects and phone number is not stored.
