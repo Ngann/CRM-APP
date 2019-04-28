@@ -7,7 +7,7 @@ _This mobile app is a simple crm app to hold contacts, with CRUD functionality._
 
 ## Demo
 
-# ![tree](./src/images/Demo.png) [tree](./src/images/Update.png)
+# ![tree](./src/images/Demo.png) # ![tree](./src/images/Update.png)
 
 ## Application Component Hierarchy
 1. App
