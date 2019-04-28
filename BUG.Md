@@ -1,5 +1,6 @@
 - Contact will only add to the DB if a first name and last name is provided(this is ok..)
-- Contact with information for phone number provdied will not hit the database.
+- Contact with information for phone number provided will not hit the database.
     - Need to fix first
-- Update contact form does not work, error : can't find varial:id
-- When updating contsct: projects and phone number is not stored.
+- Update contact form does not work, error : can't find variable id
+    - this was fixed.
+- When updating contacts: projects and phone number is not stored in DB.
