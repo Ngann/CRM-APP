@@ -38,7 +38,7 @@ const PeopleItem = (props) => {
             onPress={() => props.selectPerson(props.people)}>
         <View style={[theme.cardStyle, styles.card]}>
             <Image 
-                source={require('../images/background.jpg')}
+                source={require('../images/backgroundthree.png')}
                 style={[theme.cardImageStyle, styles.image]}
             />
             <Icon 
