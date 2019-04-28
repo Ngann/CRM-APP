@@ -96,6 +96,17 @@ class PeopleDetail extends Component {
                         <MaterialIcon name={'mode-edit'} size={40} style={styles.textIcons}/>
                         <Text style={theme.cardContentStyle}>{this.props.person.notes}</Text>
                     </View>
+                    <View style={styles.editArea}>
+                        <TouchableOpacity style={styles.sections}>
+                            <MaterialIcon name={'autorenew'} size={40} style={styles.editIcon}/>
+                            <Text style={theme.cardContentStyle}>EDIT</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.sections} 
+                         onPress={() => {this.props.deleteContact(this.props.person._id)}}>
+                        <MaterialIcon name={'delete-forever'} size={40} style={styles.editIcon}/>
+                            <Text style={theme.cardContentStyle}>DELETE</Text>
+                        </TouchableOpacity>
+                    </View>
                     <View>
                         <TouchableOpacity>
                             <Image 

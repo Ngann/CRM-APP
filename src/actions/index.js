@@ -56,3 +56,12 @@ export const loadInitialContacts = () => {
             .catch(error => console.log(error))
     };
 };
+
+export const deleteContact = (id) => {
+    return (dispatch) => {
+        fetch(`http://localhost:3000/contact/${id}`, {method: "DELETE"})
+            .then(() => {
+                dispatch({ type: 'DELETE_CONTACT'});
+            })
+    }
+}

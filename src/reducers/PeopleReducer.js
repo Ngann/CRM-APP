@@ -56,6 +56,12 @@ export default (state = initialState, action) => {
                 ...state,
                 ...action.newPerson
         }
+        case "DELETE_CONTACT":
+            return {
+                ...state,
+                companydetailedView: false,
+                personSelected: null,   
+            }
         
         default:
             return state;
