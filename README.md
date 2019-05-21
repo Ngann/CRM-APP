@@ -42,7 +42,7 @@ $ react-native run-ios
 ```
 4.  Database: Please install Mongo DB
 ```
-$ npm install 
+$ cd backend && npm install 
 ```
 ```
 $ npm start localhost 3000
